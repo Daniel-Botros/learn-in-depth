@@ -1,0 +1,13 @@
+->arm-none-eabi-gcc.exe  -c -g -mcpu=arm926ej-s -I . app.c -o app.o //compile the app
+
+->arm-none-eabi-objdump.exe -h app.o //see the size of the partitions in the file 
+
+->arm-none-eabi-as.exe -mcpu=arm926ej-s startup.s -o startup.o //compile the startup
+
+->arm-none-eabi-ld.exe -T linker_script.ld app.o uart.o startup.o -o learn-in-depth.elf //link and get the .elf file (full app)
+
+->arm-none-eabi-ld.exe -T linker_script.ld -Map=output.map app.o uart.o startup.o -o learn-in-depth.elf //link and get the .elf file + the Map file that we can see the file location  
+
+->arm-none-eabi-objcopy.exe -O binary learn-in-depth.elf learn-in-depth.bin //to make the .elf file to a .bin so we can use it in the MCU
+
+->qemu-system-arm -M versatilepb -m 128M -nographic -kernel learn-in-depth.bin //running the .bin in qemu
