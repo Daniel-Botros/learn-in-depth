@@ -1,0 +1,14 @@
+/*
+ * main.c
+ *
+ *  Created on: Nov 30, 2023
+ *      Author: Daniel
+ */
+
+#include "stdio.h"
+# include "lifo.h"
+
+
+int main () {
+	printf("all cool");
+}

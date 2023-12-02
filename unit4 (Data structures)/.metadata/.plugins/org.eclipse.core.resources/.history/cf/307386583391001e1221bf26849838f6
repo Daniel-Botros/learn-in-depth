@@ -1,0 +1,12 @@
+/*
+ * main.c
+ *
+ *  Created on: Nov 30, 2023
+ *      Author: pc
+ */
+
+#include "stdio.h"
+
+int main () {
+	printf("all cool");
+}

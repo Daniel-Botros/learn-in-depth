@@ -1,0 +1,23 @@
+/*
+ * lifo.c
+ *
+ *  Created on: Dec 2, 2023
+ *      Author: Daniel
+ */
+
+# include "lifo.h"
+#include "stdio.h"
+//APIs
+LIFO_status LIFO_init (LIFO_Buf_t* lifo_buf, unsigned int* buf, unsigned int size ){
+	if(buf == NULL)
+		return LIFO_Null;
+ prinf("all cool");
+ return LIFO_Null;
+}
+LIFO_status LIFO_Add_item (LIFO_Buf_t* lifo_buf, unsigned int item ){
+
+}
+LIFO_status LIFO_get_item (LIFO_Buf_t* lifo_buf, unsigned int* item){
+
+}
+
