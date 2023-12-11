@@ -417,3 +417,289 @@ In file included from ..\main.c:9:0:
              ^~~~~~~~~~~~~
 gcc -o stack_LIFO.exe lifo.o main.o 
 Info: Nothing to build for stack_LIFO
+21:29:32 **** Rebuild of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:23:40: warning: passing argument 2 of 'FIFO_dequeue' makes pointer from integer without a cast [-Wint-conversion]
+    error_print(FIFO_dequeue(&FIFO_uart,temp));
+                                        ^~~~
+In file included from ..\main.c:8:0:
+..\fifo.h:45:17: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t {aka unsigned char}'
+ FIFO_BUF_Status FIFO_dequeue (FIFO_Buf_t* fifo, element_type* item);
+                 ^~~~~~~~~~~~
+..\main.c:23:4: warning: 'temp' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    error_print(FIFO_dequeue(&FIFO_uart,temp));
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+..\fifo.c: In function 'FIFO_dequeue':
+..\fifo.c:48:16: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  *(fifo->head) = item;
+                ^
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+21:30:22 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+..\fifo.c: In function 'FIFO_dequeue':
+..\fifo.c:48:16: warning: comparison between pointer and integer
+  *(fifo->head) == item;
+                ^~
+..\fifo.c:48:16: warning: statement with no effect [-Wunused-value]
+  *(fifo->head) == item;
+  ~~~~~~~~~~~~~~^~~~~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+21:31:28 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+..\fifo.c: In function 'FIFO_dequeue':
+..\fifo.c:48:16: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  *(fifo->head) = item;
+                ^
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+21:33:57 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+..\fifo.c: In function 'FIFO_dequeue':
+..\fifo.c:48:16: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  *(fifo->head) = item;
+                ^
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+Info: Nothing to build for queue_FIFO
+21:35:54 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+..\fifo.c: In function 'FIFO_dequeue':
+..\fifo.c:48:16: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  *(fifo->head) = item;
+                ^
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:11:49 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+..\fifo.c: In function 'FIFO_dequeue':
+..\fifo.c:51:7: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  item = *(fifo->tail);
+       ^
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:14:52 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:15:21 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:16:37 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:17:24 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:18:06 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:21:21 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:22:20 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:23:50 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:24:15 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:24:48 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+22:25:05 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+22:30:43 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+22:35:01 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:44:52 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+22:45:51 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+22:51:08 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+22:51:58 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+22:53:41 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+22:54:13 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+22:54:38 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+22:55:15 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:11:06 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+Info: Nothing to build for queue_FIFO
+23:16:34 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:17:50 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:20:10 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:21:06 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:36:15 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:36:49 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:43:44 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:44:07 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:44:51 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:52:37 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:54:51 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+23:55:22 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+00:00:48 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 
+00:02:07 **** Incremental Build of configuration Debug for project queue_FIFO ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
+gcc -o queue_FIFO.exe fifo.o main.o 

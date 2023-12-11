@@ -1,0 +1,15 @@
+/*
+ * main.c
+ *
+ *  Created on: Dec 5, 2023
+ *      Author: Daniel
+ */
+
+#include "fifo.h"
+
+void main(){
+	FIFO_Buf_t FIFO_uart;
+
+
+}
+
