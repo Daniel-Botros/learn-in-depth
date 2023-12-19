@@ -1,0 +1,7 @@
+18:01:57 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+
+18:01:58 Build Finished (took 410ms)
+

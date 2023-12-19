@@ -703,3 +703,876 @@ gcc -o queue_FIFO.exe fifo.o main.o
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o fifo.o "..\\fifo.c" 
 gcc -o queue_FIFO.exe fifo.o main.o 
+20:22:27 **** Rebuild of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'AddStudent':
+..\linked_list_st.c:21:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent == NULL){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c:21:5: note: each undeclared identifier is reported only once for each function it appears in
+..\linked_list_st.c:23:50: error: invalid application of 'sizeof' to incomplete type 'struct SStudent'
+   pNewStudent = (struct SStudent*) malloc(sizeof(struct SStudent));
+                                                  ^~~~~~
+..\linked_list_st.c:32:21: error: dereferencing pointer to incomplete type 'struct SStudent'
+   while(pLastStudent->PNextStudent)
+                     ^~
+..\linked_list_st.c:36:50: error: invalid application of 'sizeof' to incomplete type 'struct SStudent'
+   pNewStudent = (struct SStudent*) malloc(sizeof(struct SStudent));
+                                                  ^~~~~~
+..\linked_list_st.c: In function 'delete_student':
+..\linked_list_st.c:71:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c:80:23: error: dereferencing pointer to incomplete type 'struct SStudent'
+    if(pSelectedStudent->Student.ID == selected_id){
+                       ^~
+..\linked_list_st.c: In function 'view_Students':
+..\linked_list_st.c:107:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c:113:45: error: dereferencing pointer to incomplete type 'struct SStudent'
+    printf("\n \t ST ID : %d",pCurrentStudent->Student.ID);
+                                             ^~
+..\linked_list_st.c: In function 'DeleteALL':
+..\linked_list_st.c:129:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c:135:37: error: dereferencing pointer to incomplete type 'struct SStudent'
+    pCurrentStudent = pCurrentStudent->PNextStudent;
+                                     ^~
+20:24:09 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:24:59 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:25:56 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:26:35 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:29:10: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+   switch(atoi(temp_text)){
+          ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:27:01 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:27:10 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:27:15 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:29:54 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:30:28 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:30:40 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'AddStudent':
+..\linked_list_st.c:18:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent == NULL){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c:18:5: note: each undeclared identifier is reported only once for each function it appears in
+..\linked_list_st.c:18:23: error: 'NULL' undeclared (first use in this function)
+  if(gpFirstStudent == NULL){
+                       ^~~~
+..\linked_list_st.c:20:36: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+   pNewStudent = (struct SStudent*) malloc(sizeof(struct SStudent));
+                                    ^~~~~~
+..\linked_list_st.c:20:36: warning: incompatible implicit declaration of built-in function 'malloc'
+..\linked_list_st.c:20:36: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\linked_list_st.c:20:50: error: invalid application of 'sizeof' to incomplete type 'struct SStudent'
+   pNewStudent = (struct SStudent*) malloc(sizeof(struct SStudent));
+                                                  ^~~~~~
+..\linked_list_st.c:29:21: error: dereferencing pointer to incomplete type 'struct SStudent'
+   while(pLastStudent->PNextStudent)
+                     ^~
+..\linked_list_st.c:33:36: warning: incompatible implicit declaration of built-in function 'malloc'
+   pNewStudent = (struct SStudent*) malloc(sizeof(struct SStudent));
+                                    ^~~~~~
+..\linked_list_st.c:33:36: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+..\linked_list_st.c:33:50: error: invalid application of 'sizeof' to incomplete type 'struct SStudent'
+   pNewStudent = (struct SStudent*) malloc(sizeof(struct SStudent));
+                                                  ^~~~~~
+..\linked_list_st.c:39:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("\n Enter The Student ID : ");
+  ^~~~~~
+..\linked_list_st.c:39:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\linked_list_st.c:39:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\linked_list_st.c:40:2: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+  gets(temp_text);
+  ^~~~
+..\linked_list_st.c:41:28: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  pNewStudent->Student.ID = atoi(temp_text);
+                            ^~~~
+..\linked_list_st.c:48:32: warning: implicit declaration of function 'atof' [-Wimplicit-function-declaration]
+  pNewStudent->Student.height = atof(temp_text);
+                                ^~~~
+..\linked_list_st.c: In function 'delete_student':
+..\linked_list_st.c:62:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("\n Enter The Student ID to Be Deleted : ");
+  ^~~~~~
+..\linked_list_st.c:62:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\linked_list_st.c:68:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c:71:39: error: 'NULL' undeclared (first use in this function)
+   struct SStudent* pPreviousStudent = NULL;
+                                       ^~~~
+..\linked_list_st.c:77:23: error: dereferencing pointer to incomplete type 'struct SStudent'
+    if(pSelectedStudent->Student.ID == selected_id){
+                       ^~
+..\linked_list_st.c:88:5: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+     free(pSelectedStudent);
+     ^~~~
+..\linked_list_st.c:88:5: warning: incompatible implicit declaration of built-in function 'free'
+..\linked_list_st.c:88:5: note: include '<stdlib.h>' or provide a declaration of 'free'
+..\linked_list_st.c: In function 'view_Students':
+..\linked_list_st.c:104:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c:109:4: warning: incompatible implicit declaration of built-in function 'printf'
+    printf("\n \t ST no. : %d",count);
+    ^~~~~~
+..\linked_list_st.c:109:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\linked_list_st.c:110:45: error: dereferencing pointer to incomplete type 'struct SStudent'
+    printf("\n \t ST ID : %d",pCurrentStudent->Student.ID);
+                                             ^~
+..\linked_list_st.c:120:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("\n Empty list !!!");
+   ^~~~~~
+..\linked_list_st.c:120:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\linked_list_st.c: In function 'DeleteALL':
+..\linked_list_st.c:126:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c:132:37: error: dereferencing pointer to incomplete type 'struct SStudent'
+    pCurrentStudent = pCurrentStudent->PNextStudent;
+                                     ^~
+..\linked_list_st.c:133:4: warning: incompatible implicit declaration of built-in function 'free'
+    free(PTempStudent);
+    ^~~~
+..\linked_list_st.c:133:4: note: include '<stdlib.h>' or provide a declaration of 'free'
+..\linked_list_st.c:136:20: error: 'NULL' undeclared (first use in this function)
+   gpFirstStudent = NULL;
+                    ^~~~
+..\linked_list_st.c:139:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("\n No list to Delete !!!");
+   ^~~~~~
+..\linked_list_st.c:139:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+20:30:50 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:32:19 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c:10:8: warning: type defaults to 'int' in declaration of 'gpFirstStudent' [-Wimplicit-int]
+ extern gpFirstStudent;
+        ^~~~~~~~~~~~~~
+..\linked_list_st.c:10:8: error: conflicting types for 'gpFirstStudent'
+In file included from ..\linked_list_st.c:8:0:
+..\linked_list_st.h:31:18: note: previous definition of 'gpFirstStudent' was here
+ struct SStudent* gpFirstStudent = NULL;
+                  ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'AddStudent':
+..\linked_list_st.c:20:20: warning: comparison between pointer and integer
+  if(gpFirstStudent == NULL){
+                    ^~
+..\linked_list_st.c:24:18: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   gpFirstStudent = pNewStudent;
+                  ^
+..\linked_list_st.c:30:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   pLastStudent =gpFirstStudent;
+                ^
+..\linked_list_st.c: In function 'delete_student':
+..\linked_list_st.c:72:39: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   struct SStudent* pSelectedStudent = gpFirstStudent;
+                                       ^~~~~~~~~~~~~~
+..\linked_list_st.c:88:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+      gpFirstStudent = pSelectedStudent->PNextStudent;
+                     ^
+..\linked_list_st.c: In function 'view_Students':
+..\linked_list_st.c:106:37: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'DeleteALL':
+..\linked_list_st.c:128:37: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c:138:18: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   gpFirstStudent = NULL;
+                  ^
+20:32:43 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:35:20 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+In file included from ..\main.c:10:0:
+..\linked_list_st.h:31:25: warning: 'gpFirstStudent' initialized and declared 'extern'
+ extern struct SStudent* gpFirstStudent = NULL;
+                         ^~~~~~~~~~~~~~
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+In file included from ..\linked_list_st.c:8:0:
+..\linked_list_st.h:31:25: warning: 'gpFirstStudent' initialized and declared 'extern'
+ extern struct SStudent* gpFirstStudent = NULL;
+                         ^~~~~~~~~~~~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:36:38 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:39:34 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:16:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'AddStudent':
+..\linked_list_st.c:18:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent == NULL){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c:18:5: note: each undeclared identifier is reported only once for each function it appears in
+..\linked_list_st.c: In function 'delete_student':
+..\linked_list_st.c:68:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'view_Students':
+..\linked_list_st.c:104:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'DeleteALL':
+..\linked_list_st.c:126:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+20:40:16 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c:10:8: warning: type defaults to 'int' in declaration of 'gpFirstStudent' [-Wimplicit-int]
+ extern gpFirstStudent;
+        ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'AddStudent':
+..\linked_list_st.c:20:20: warning: comparison between pointer and integer
+  if(gpFirstStudent == NULL){
+                    ^~
+..\linked_list_st.c:24:18: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   gpFirstStudent = pNewStudent;
+                  ^
+..\linked_list_st.c:30:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   pLastStudent =gpFirstStudent;
+                ^
+..\linked_list_st.c: In function 'delete_student':
+..\linked_list_st.c:72:39: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   struct SStudent* pSelectedStudent = gpFirstStudent;
+                                       ^~~~~~~~~~~~~~
+..\linked_list_st.c:88:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+      gpFirstStudent = pSelectedStudent->PNextStudent;
+                     ^
+..\linked_list_st.c: In function 'view_Students':
+..\linked_list_st.c:106:37: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'DeleteALL':
+..\linked_list_st.c:128:37: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c:138:18: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   gpFirstStudent = NULL;
+                  ^
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+20:42:23 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c:10:8: error: unknown type name 'SStudent'
+ extern SStudent* gpFirstStudent;
+        ^~~~~~~~
+..\linked_list_st.c: In function 'AddStudent':
+..\linked_list_st.c:24:18: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   gpFirstStudent = pNewStudent;
+                  ^
+..\linked_list_st.c:30:16: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   pLastStudent =gpFirstStudent;
+                ^
+..\linked_list_st.c: In function 'delete_student':
+..\linked_list_st.c:72:39: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+   struct SStudent* pSelectedStudent = gpFirstStudent;
+                                       ^~~~~~~~~~~~~~
+..\linked_list_st.c:88:21: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+      gpFirstStudent = pSelectedStudent->PNextStudent;
+                     ^
+..\linked_list_st.c: In function 'view_Students':
+..\linked_list_st.c:106:37: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'DeleteALL':
+..\linked_list_st.c:128:37: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+20:43:32 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:14:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:43:43 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:43:50 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:44:41 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+20:45:20 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:17:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:46:01 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+20:46:42 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:48:24 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:49:10 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'AddStudent':
+..\linked_list_st.c:21:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent == NULL){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c:21:5: note: each undeclared identifier is reported only once for each function it appears in
+..\linked_list_st.c: In function 'delete_student':
+..\linked_list_st.c:71:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'view_Students':
+..\linked_list_st.c:107:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'DeleteALL':
+..\linked_list_st.c:129:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+20:49:25 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'AddStudent':
+..\linked_list_st.c:21:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent == NULL){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c:21:5: note: each undeclared identifier is reported only once for each function it appears in
+..\linked_list_st.c: In function 'delete_student':
+..\linked_list_st.c:71:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'view_Students':
+..\linked_list_st.c:107:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'DeleteALL':
+..\linked_list_st.c:129:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+20:49:32 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:22:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'AddStudent':
+..\linked_list_st.c:21:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent == NULL){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c:21:5: note: each undeclared identifier is reported only once for each function it appears in
+..\linked_list_st.c: In function 'delete_student':
+..\linked_list_st.c:71:5: error: 'gpFirstStudent' undeclared (first use in this function)
+  if(gpFirstStudent){
+     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'view_Students':
+..\linked_list_st.c:107:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'DeleteALL':
+..\linked_list_st.c:129:37: error: 'gpFirstStudent' undeclared (first use in this function)
+  struct SStudent* pCurrentStudent = gpFirstStudent;
+                                     ^~~~~~~~~~~~~~
+20:49:53 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:20:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:50:21 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:50:44 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:50:51 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:50:54 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:50:56 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+20:51:29 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:18:39 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+21:21:33 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:21:52 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:21:53 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:21:57 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:22:01 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:22:20 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+main.o:main.c:(.bss+0x0): multiple definition of `gpFirstStudent'
+linked_list_st.o:linked_list_st.c:(.bss+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+21:23:50 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+21:25:39 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+..\main.c:56:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+21:25:45 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+..\main.c:56:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+21:26:50 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:27:18 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+21:27:40 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:27:45 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:27:59 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:28:25 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+21:30:19 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:31:23 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+20:53:27 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:50:3: error: duplicate case value
+   case 4 :
+   ^~~~
+..\main.c:47:3: error: previously used here
+   case 4 :
+   ^~~~
+20:53:35 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'Find_student_index':
+..\linked_list_st.c:171:16: warning: statement with no effect [-Wunused-value]
+    Student_temp->PNextStudent;
+    ~~~~~~~~~~~~^~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:50:3: error: duplicate case value
+   case 4 :
+   ^~~~
+..\main.c:47:3: error: previously used here
+   case 4 :
+   ^~~~
+20:53:48 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+21:10:54 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'Find_student_index':
+..\linked_list_st.c:175:17: warning: statement with no effect [-Wunused-value]
+    pStudent_temp->PNextStudent;
+    ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+21:15:01 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+21:55:19 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'linked_length_recursive':
+..\linked_list_st.c:199:10: warning: implicit declaration of function 'count_items_rec' [-Wimplicit-function-declaration]
+  count = count_items_rec(gpFirstStudent,count);
+          ^~~~~~~~~~~~~~~
+..\linked_list_st.c: In function 'count_items_rec':
+..\linked_list_st.c:218:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+21:56:26 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+..\linked_list_st.c: In function 'count_items_rec':
+..\linked_list_st.c:204:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+22:19:17 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+Info: Nothing to build for linked_list_students
+22:22:52 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+22:27:53 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+22:13:32 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+22:32:02 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+18:02:12 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+18:12:12 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+Info: Nothing to build for linked_list_students
+22:21:32 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+22:26:44 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+22:58:11 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:18:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+23:02:10 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+23:08:51 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file linked_list_students.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:08:56 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+23:19:33 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+23:22:01 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+23:24:30 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+17:54:02 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 
+18:01:57 **** Incremental Build of configuration Debug for project linked_list_students ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o linked_list_st.o "..\\linked_list_st.c" 
+gcc -o linked_list_students.exe linked_list_st.o main.o 

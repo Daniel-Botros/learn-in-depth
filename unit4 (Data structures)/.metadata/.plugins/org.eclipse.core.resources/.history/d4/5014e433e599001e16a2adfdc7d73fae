@@ -1,0 +1,41 @@
+/*
+ * linked_list_st.h
+ *
+ *  Created on: Dec 11, 2023
+ *      Author: Daniel
+ */
+
+#ifndef LINKED_LIST_ST_H_
+#define LINKED_LIST_ST_H_
+
+#include "stdio.h"
+
+
+
+//effective data
+
+struct Sdata{
+	int ID;
+	char name [40];
+	float height;
+};
+
+struct SStudent{
+	struct Sdata Student;
+	struct SStudent* PNextStudent;
+};
+
+//head
+
+struct SStudent* gpFirstStudent = NULL;
+
+//APIs
+
+void AddStudent();
+int delete_student();
+void view_Students();
+void DeleteALL();
+
+
+
+#endif /* LINKED_LIST_ST_H_ */

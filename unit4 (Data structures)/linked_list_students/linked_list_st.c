@@ -1,0 +1,338 @@
+/*
+ * linked_list_st.c
+ *
+ *  Created on: Dec 11, 2023
+ *      Author: Daniel
+ */
+
+#include "linked_list_st.h"
+
+
+#include "stdio.h"
+#include "stdlib.h"
+#include "string.h"
+#include "conio.h"
+
+//head
+
+struct SStudent* gpFirstStudent = NULL;
+
+
+
+void AddStudent(){
+	struct SStudent* pNewStudent;
+	struct SStudent* pLastStudent;
+	char temp_text [40];
+
+	//check if list is empty
+
+	if(gpFirstStudent == NULL){
+		//create new record
+		pNewStudent = (struct SStudent*) malloc(sizeof(struct SStudent));
+		//assign it to head
+		gpFirstStudent = pNewStudent;
+	}
+
+	//list not empty
+
+	else{
+		pLastStudent =gpFirstStudent;
+		while(pLastStudent->PNextStudent)
+			pLastStudent=pLastStudent->PNextStudent;
+
+		//create new record
+		pNewStudent = (struct SStudent*) malloc(sizeof(struct SStudent));
+		pLastStudent->PNextStudent = pNewStudent;
+	}
+
+	//fill record
+
+	printf("\n Enter The Student ID : ");
+	gets(temp_text);
+	pNewStudent->Student.ID = atoi(temp_text);
+
+	printf("\n Enter The Student Name : ");
+	gets(pNewStudent->Student.name);
+
+	printf("\n Enter The Student height : ");
+	gets(temp_text);
+	pNewStudent->Student.height = atof(temp_text);
+
+	//set the end node to null
+	pNewStudent->PNextStudent = NULL;
+
+}
+
+int delete_student(){
+
+	char temp_text [40];
+	unsigned  int selected_id;
+
+	//get the node id
+
+	printf("\n Enter The Student ID to Be Deleted : ");
+	gets(temp_text);
+	selected_id = atoi(temp_text);
+
+	//is list empty
+
+	if(gpFirstStudent){
+
+		struct SStudent* pSelectedStudent = gpFirstStudent;
+		struct SStudent* pPreviousStudent = NULL;
+
+		//loop on all records
+		while(pSelectedStudent){
+
+			//compare the node id with user given ID
+			if(pSelectedStudent->Student.ID == selected_id){
+
+				//not 1st Student
+				if(pPreviousStudent){
+					pPreviousStudent->PNextStudent=pSelectedStudent->PNextStudent;
+
+				}
+				//1st Student
+				else
+					gpFirstStudent = pSelectedStudent->PNextStudent;
+
+				free(pSelectedStudent);
+				return 1 ;
+
+			}
+			pPreviousStudent= pSelectedStudent;
+			pSelectedStudent=pSelectedStudent->PNextStudent;
+		}
+		printf("\n NO Student with this ID !!!");
+		return 0;
+	}
+	printf("\n NO Data In The List !!!");
+	return 0;
+}
+
+void view_Students(){
+
+	struct SStudent* pCurrentStudent = gpFirstStudent;
+	int count = 1;
+	if(gpFirstStudent){
+		while(pCurrentStudent){
+
+			printf("\n \t ST no. : %d",count);
+			printf("\n \t ST ID : %d",pCurrentStudent->Student.ID);
+			printf("\n \t ST Name : %s",pCurrentStudent->Student.name);
+			printf("\n \t ST Height : %f",pCurrentStudent->Student.height);
+
+			pCurrentStudent = pCurrentStudent->PNextStudent;
+			count++;
+
+		}
+	}
+	else
+		printf("\n Empty list !!!");
+
+}
+
+void DeleteALL(){
+
+	struct SStudent* pCurrentStudent = gpFirstStudent;
+
+	if(gpFirstStudent){
+		while(pCurrentStudent){
+
+			struct SStudent* PTempStudent = pCurrentStudent;
+			pCurrentStudent = pCurrentStudent->PNextStudent;
+			free(PTempStudent);
+
+		}
+		gpFirstStudent = NULL;
+	}
+	else
+		printf("\n No list to Delete !!!");
+
+}
+
+int Find_student_index(){
+
+	char temp_text [40];
+	struct SStudent* pStudent_temp = gpFirstStudent;
+	int count = 1;
+
+	//get the node id
+
+	printf("\n Enter The Index : ");
+	gets(temp_text);
+
+	//is list empty
+
+	if(gpFirstStudent){
+
+		//loop to index
+		while(pStudent_temp){
+
+			if(count == atoi(temp_text))
+				break;
+
+			pStudent_temp=pStudent_temp->PNextStudent;
+			count++;
+		}
+
+		if(count == atoi(temp_text)){
+			printf("\n \t ST no. : %d",atoi(temp_text));
+			printf("\n \t ST ID : %d",pStudent_temp->Student.ID);
+			printf("\n \t ST Name : %s",pStudent_temp->Student.name);
+			printf("\n \t ST Height : %f",pStudent_temp->Student.height);
+			return 1;
+		}
+
+		printf("\n NO Student with this ID !!!");
+		return 0;
+	}
+	printf("\n NO Data In The List !!!");
+	return 0;
+
+}
+
+int count_items_rec(struct SStudent* pStudent_temp , int count){
+
+	if(!pStudent_temp){
+		return count;
+	}
+
+	return count_items_rec(pStudent_temp->PNextStudent, ++count);
+
+}
+
+void linked_length_recursive(){
+
+	int count = 0;
+
+	count = count_items_rec(gpFirstStudent,count);
+
+	if(count)
+		printf("\n No. of Nodes : %d",count);
+	else
+		printf("\n No Items In List %d",count);
+
+}
+
+int Find_student_index_end(){
+
+	char temp_text [40];
+	struct SStudent* pStudent_temp_early = gpFirstStudent;
+	struct SStudent* pStudent_temp_late = gpFirstStudent;
+	int count = 0;
+
+	//get the node id
+
+	printf("\n Enter The Index (End): ");
+	gets(temp_text);
+
+	//is list empty
+
+	if(gpFirstStudent){
+
+		//loop to index
+		while(pStudent_temp_early){
+
+			if(count >= atoi(temp_text))
+				pStudent_temp_late = pStudent_temp_late->PNextStudent;
+
+			pStudent_temp_early = pStudent_temp_early->PNextStudent;
+			count++;
+		}
+		//print the st
+		if((count-atoi(temp_text)) == atoi(temp_text)){
+			printf("\n \t ST no. : %d",count-atoi(temp_text));
+			printf("\n \t ST ID : %d",pStudent_temp_late->Student.ID);
+			printf("\n \t ST Name : %s",pStudent_temp_late->Student.name);
+			printf("\n \t ST Height : %f",pStudent_temp_late->Student.height);
+			return 1;
+		}
+
+		printf("\n NO Student with this ID !!!");
+		return 0;
+	}
+	printf("\n NO Data In The List !!!");
+	return 0;
+
+}
+
+void Reverse_Linked_List(){
+
+	if(gpFirstStudent){
+
+
+		struct SStudent *pcurrent,*pprev,*pnext ;
+		pcurrent = gpFirstStudent ;
+		pprev = NULL ;
+
+		while(pcurrent){
+
+			pnext = pcurrent->PNextStudent;
+			pcurrent->PNextStudent = pprev;
+			pprev = pcurrent;
+			pcurrent=pnext;
+
+		}
+
+		gpFirstStudent = pprev;
+		printf("The List Has Been Reverse.");
+
+	}
+	else
+		printf("\n NO Data In The List !!!");
+
+}
+
+void Middle_Of_List(){
+
+	if(gpFirstStudent){
+
+		struct SStudent *pfast = gpFirstStudent ;
+		struct SStudent *pslow = gpFirstStudent ;
+		int count = 1;
+
+		//loop to index
+		while(pfast){
+
+			pfast = pfast->PNextStudent;
+			if(pfast){
+				pfast = pfast->PNextStudent;
+			}
+
+			//for even lists
+
+			if(!pfast){
+				break;
+			}
+
+			//for odd lists
+
+			if(pfast){
+				if(!pfast->PNextStudent){
+					pslow = pslow->PNextStudent;
+					count++;
+					break;
+				}
+			}
+
+
+			pslow = pslow->PNextStudent;
+
+			count++;
+
+		}
+
+		//print the st
+
+		printf("\n \t ST no. : %d",count);
+		printf("\n \t ST ID : %d",pslow->Student.ID);
+		printf("\n \t ST Name : %s",pslow->Student.name);
+		printf("\n \t ST Height : %f",pslow->Student.height);
+
+
+	}
+	else
+		printf("\n NO Data In The List !!!");
+
+}
